@@ -7,7 +7,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  background-color: #F6F6F6;
+  min-height: 100vh;
+}
+
+.header {
+  padding-top: 48px;
+}
+
+.header__logo {
+  font-size: 3rem;
+  color: #1A1919;
 }

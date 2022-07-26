@@ -1,0 +1,14 @@
+.App {
+  background-color: $bg-color;
+  min-height: 100vh;
+}
+
+.header {
+  padding-top: 48px;
+}
+
+.header__logo {
+  font-size: 3rem;
+  font-weight: 300;
+  color: $black;
+}
