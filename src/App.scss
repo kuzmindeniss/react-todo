@@ -1,10 +1,14 @@
 .App {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   background-color: $bg-color;
   min-height: 100vh;
 }
 
 .header {
   padding-top: 48px;
+  margin-bottom: 28px;
 }
 
 .header__logo {

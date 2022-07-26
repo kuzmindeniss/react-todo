@@ -1,3 +1,7 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,18 +9,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
 }
-
-.App {
-  background-color: #F6F6F6;
-  min-height: 100vh;
-}
-
-.header {
-  padding-top: 48px;
-}
-
-.header__logo {
-  font-size: 3rem;
-  color: #1A1919;
-}
+@import "variables";
+@import "App";
+@import "components/Todos";

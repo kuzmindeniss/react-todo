@@ -1,0 +1,104 @@
+$todos-padding: 10px;
+$todos-padding-left: 60px;
+
+.todos {
+  display: flex;
+  align-content: stretch;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  font-size: 1.3rem;
+  background: $white;
+  box-shadow: 0 1px 8px 0 rgba(34, 60, 80, 0.1);
+}
+
+.todos__input {
+  position: relative;
+  width: 100%;
+  padding: $todos-padding;
+  padding-left: $todos-padding-left;
+  border: none;
+  outline: none;
+  color: $gray-light;
+  font-weight: 500;
+  font-size: inherit;
+
+  &::placeholder {
+    color: rgba($gray-light, .4);
+  }
+}
+
+.todos__input-wrapper {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    opacity: .5;
+    z-index: 1;
+    top: 12px;
+    left: 20px;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-image: url("../svgs/text-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all .2s;
+  }
+
+  &:hover:before {
+    opacity: 1;
+  }
+}
+
+.todos__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todos__item {
+  position: relative;
+  padding: $todos-padding;
+  padding-left: $todos-padding-left;
+  cursor: pointer;
+  transition: opacity .3s;
+
+  &:before {
+    position: absolute;
+    border: 1px solid $black;
+    border-radius: 30px;
+    opacity: .5;
+    z-index: 1;
+    top: 11px;
+    left: 14px;
+    content: '';
+    width: 30px;
+    height: 30px;;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    transition: all .2s;
+  }
+
+  &:hover {
+    opacity: .6;
+  }
+
+  &:hover:before {
+    background-image: url("../svgs/check-icon.svg")
+  }
+}
+
+.todos__item:last-child {
+  padding-bottom: 15px;
+}
+
+.todos__item--completed {
+  text-decoration: line-through;
+
+  &:before {
+    background-image: url("../svgs/check-icon.svg")
+  }
+}
